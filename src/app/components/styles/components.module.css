@@ -1,0 +1,172 @@
+.header {
+  width: 90vw;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  margin-top: 15px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eventHeader {
+  width: 90vw;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  flex-shrink: 0;
+  gap: 0.8rem;
+  padding: 1rem 0 0 0;
+}
+
+.footerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 3px;
+}
+
+.footer p {
+  width: 265px;
+  color: #ffffff;
+  font-size: 12px;
+
+  font-weight: medium;
+  text-align: center;
+  text-wrap: pretty;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: #ffffff;
+  font-size: 12px;
+
+  text-decoration: underline;
+  font-weight: medium;
+}
+
+.confirmedList {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  flex: 1;
+}
+
+
+
+.filterContainer {
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filterOption {
+  width: 130px;
+  height: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  gap: 1rem;
+  border: #7775a7 1px solid;
+  border-radius: 16.28px;
+}
+
+.messageContainer {
+  width: 90vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.userContainer {
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.messageInfo {
+  min-width: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.newMensage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin-right: 1rem;
+  text-align: center;
+  background-color: yellowgreen;
+}
+
+@media (min-width: 768px) {
+.header {
+  width: 60vw;
+}
+
+.eventHeader {
+  width: 60vw;
+}
+
+.confirmedList {
+  width: 60vw;
+}
+
+.filterContainer {
+  width: 60vw;
+}
+
+.filterOption {
+  width: 130px;
+  height: 1.8rem;
+}
+
+.messageContainer {
+  width: 60vw;
+  min-height: 60vh;
+}
+}

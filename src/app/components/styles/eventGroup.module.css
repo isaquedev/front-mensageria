@@ -1,0 +1,192 @@
+.eventGroup{
+  width: 90vw;
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.messagesPanel{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  overflow-y: auto;
+}
+
+.botCard {
+  width: 99.5%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.botMessageCard{
+  width: 40vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 7px;
+  background-color: #FFCCE1;
+  padding: 1rem;
+  border-radius: 16.28px;
+  border-radius: 0px 8px 8px 8px;
+}
+
+.botName {
+  color: #080930;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.botMessageCard .hour{
+  text-align: left;
+  color: #37313C;
+  font-weight: medium;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* User message */
+.eventGroup .userCard {
+  width: 99.5%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.userMessageCard{
+  width: 40vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: right;
+  gap: 7px;
+  background-color: #D8D8D8;
+  padding: 1rem;
+  border-radius: 16.28px;
+  border-radius: 8px 0px 8px 8px;
+}
+
+.botMessage p, .userMessage p {
+  display: flex;
+  align-items: center;
+  color: #080930;
+  font-weight: medium;
+  text-align: left;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.userMessageCard .hour{
+  text-align: right;
+  color: #37313C;
+  font-weight: medium;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* Input icons */
+.inputMessage{
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.8rem;
+  border: #AEA8B2 1px solid;
+  border-radius: 50px;  
+  flex-shrink: 0;
+}
+
+.inputMessage input{
+  width: 70%;
+  height: 100%;
+  border: none;
+  background-color: none;
+  color: #000000;
+  font-size: 14px;
+}
+
+.inputMessage input::placeholder{
+  color: #AEA8B2;
+}
+
+.inputMessage input:focus{
+  outline: none;
+}
+
+.inputMessage .buttons{
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.inputMessage .buttons button{
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  width: 15px;
+  height: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .eventGroup{
+    width: 60vw;
+  }
+  
+  .messagesPanel{
+    width: 100%;
+  }
+  
+  .botCard {
+    width: 99.5%;
+  }
+  
+  .botMessageCard{
+    width: 40vw;
+  }
+  
+  /* User message */
+  .eventGroup .userCard {
+    width: 99.5%;
+  }
+  
+  .userMessageCard{
+    width: 40vw;
+  }
+  
+  .inputMessage{
+    width: 60vw;
+  }
+  
+  .inputMessage input{
+    width: 70%;
+  }
+}
