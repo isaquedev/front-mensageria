@@ -1,0 +1,15 @@
+.messageContainer {
+  width: 90vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .messageContainer {
+    width: 60vw;
+    min-height: 60vh;
+  }
+}

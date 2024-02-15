@@ -1,13 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import styles from "./styles/eventGroup.module.css";
+import styles from "./styles.module.css";
+import { SendedMessage } from "./components/SendedMessage";
+import { ReceivedMessage } from "./components/ReceivedMessage";
 
 const bot = {
   img: "/user1.jpg",
   name: "Lisa",
 };
 
-// Função para pegar a hora atual
 function getCurrentHour() {
   const date = new Date();
   const hour = date.getHours();
@@ -15,7 +16,7 @@ function getCurrentHour() {
   return `${hour}:${minutes < 10 ? "0" + minutes : minutes}`;
 }
 
-// Componente para renderizar o chat
+// Esse componente no geral ficou bem legal, apenas acredito que valia a pena quebrar ele em mais componentes
 const EventGroup = () => {
   const [userMessages, setUserMessages] = useState<
     { text: string; fromUser: boolean; time: string }[]
@@ -23,7 +24,6 @@ const EventGroup = () => {
   const [userInput, setUserInput] = useState("");
   const messagesPanelRef = useRef<HTMLDivElement>(null);
 
-  // Função para rolar a tela para baixo
   const scrollToBottom = () => {
     if (messagesPanelRef.current) {
       messagesPanelRef.current.scrollTo({
@@ -37,7 +37,6 @@ const EventGroup = () => {
     scrollToBottom();
   }, [userMessages]);
 
-  // Função para enviar mensagem
   const sendMessage = () => {
     if (userInput.trim() !== "" && userInput.length <= 80) {
       const newMessage = {
@@ -55,7 +54,6 @@ const EventGroup = () => {
     }
   };
 
-  // Função para a resposta do bot
   const botResponse = () => {
     setTimeout(() => {
       const newMessage = {
@@ -67,7 +65,6 @@ const EventGroup = () => {
     }, 1000);
   };
 
-  // Função para enviar mensagem ao apertar "Enter"
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       sendMessage();
@@ -77,52 +74,18 @@ const EventGroup = () => {
   return (
     <main className={styles.eventGroup}>
       <section className={styles.messagesPanel} ref={messagesPanelRef}>
-        {/* Renderizar mensagens do usuário e do bot */}
-        {userMessages.map((message, index) => (
-          <section
-            key={index}
-            className={message.fromUser ? styles.userCard : styles.botCard}
-          >
-             {!message.fromUser && (
-              <Image
-                src={bot.img}
-                alt={bot.name}
-                width={39}
-                height={39}
-                style={{ borderRadius: "50%", objectFit: "cover" }}
-              />
-            )}
-            <section
-              key={index}
-              className={
-                message.fromUser
-                  ? styles.userMessageCard
-                  : styles.botMessageCard
-              }
-            >
-              {!message.fromUser && (
-                <div className={styles.botName}>
-                  <p>{bot.name}</p>
-                </div>
-              )}
-              <div className={styles.messageCard}>
-                <div
-                  className={
-                    message.fromUser ? styles.userMessage : styles.botMessage
-                  }
-                >
-                  <p>{message.text}</p>
-                </div>
-                <div className={styles.hour}>
-                  <p>{message.time}</p>
-                </div>
-              </div>
-            </section>
-          </section>
-        ))}
+        {/* Alterado!
+         
+         Ao invés de criar um componente único que lida com os dois estados, a mensagem enviada e a mensagem recebida
+         criei um componente separado para cada um. Assim a lógica fica bem mais simples.
+          
+         */}
+        {userMessages.map((message, index) => {
+          if (message.fromUser) return <SendedMessage key={index} {...message} />
+          return <ReceivedMessage key={index} message={message} user={bot} />
+        })}
       </section>
 
-      {/* Componente para enviar mensagem */}
       <section className={styles.inputMessage}>
         <input
           type="text"

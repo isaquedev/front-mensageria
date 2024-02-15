@@ -1,0 +1,36 @@
+.filterContainer {
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filterOption {
+  width: 130px;
+  height: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  gap: 1rem;
+  border: #7775a7 1px solid;
+  border-radius: 16.28px;
+  color: #7775a7;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .filterContainer {
+    width: 60vw;
+  }
+
+  .filterOption {
+    width: 130px;
+    height: 1.8rem;
+  }
+}
