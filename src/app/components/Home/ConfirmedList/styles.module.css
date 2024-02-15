@@ -1,0 +1,14 @@
+.confirmedList {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .confirmedList {
+    width: 60vw;
+  }
+}

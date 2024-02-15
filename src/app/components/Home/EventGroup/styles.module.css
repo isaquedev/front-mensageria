@@ -19,45 +19,6 @@
   overflow-y: auto;
 }
 
-.botCard {
-  width: 99.5%;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-}
-
-.botMessageCard{
-  width: 40vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  gap: 7px;
-  background-color: #FFCCE1;
-  padding: 1rem;
-  border-radius: 16.28px;
-  border-radius: 0px 8px 8px 8px;
-}
-
-.botName {
-  color: #080930;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.botMessageCard .hour{
-  text-align: left;
-  color: #37313C;
-  font-weight: medium;
-  font-size: 10px;
-  margin-top: 10px;
-}
-
 /* User message */
 .eventGroup .userCard {
   width: 99.5%;
@@ -68,38 +29,6 @@
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
-}
-
-.userMessageCard{
-  width: 40vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: right;
-  gap: 7px;
-  background-color: #D8D8D8;
-  padding: 1rem;
-  border-radius: 16.28px;
-  border-radius: 8px 0px 8px 8px;
-}
-
-.botMessage p, .userMessage p {
-  display: flex;
-  align-items: center;
-  color: #080930;
-  font-weight: medium;
-  text-align: left;
-  font-size: 14px;
-  word-break: break-word;
-}
-
-.userMessageCard .hour{
-  text-align: right;
-  color: #37313C;
-  font-weight: medium;
-  font-size: 10px;
-  margin-top: 10px;
 }
 
 /* Input icons */
@@ -165,21 +94,9 @@
     width: 100%;
   }
   
-  .botCard {
-    width: 99.5%;
-  }
-  
-  .botMessageCard{
-    width: 40vw;
-  }
-  
   /* User message */
   .eventGroup .userCard {
     width: 99.5%;
-  }
-  
-  .userMessageCard{
-    width: 40vw;
   }
   
   .inputMessage{

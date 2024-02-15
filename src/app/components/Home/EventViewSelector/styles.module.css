@@ -18,31 +18,14 @@
   padding: 1rem;
   background: none;
   border: none;
+  border-bottom: 1px solid #aea8b2;
+  cursor: pointer;
 }
 
-.optionTextSelected {
-  width: 164px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.buttonOptionSelected {
+  border-bottom: solid #e62875;
   color: #e62875;
-  font-weight: medium;
-  padding: 1.4rem;
-  font-size: 1rem;
 }
-
-.optionText {
-  width: 164px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #080930;
-  font-weight: medium;
-  padding: 1.3rem;
-
-  font-size: 1rem;
-}
-
 
 @media (min-width: 768px) {
   .messageOptions {

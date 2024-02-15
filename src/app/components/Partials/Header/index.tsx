@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./styles/components.module.css";
+import styles from "./styles.module.css";
 
 const Header = () => {
   return (
@@ -16,8 +16,11 @@ const Header = () => {
           src="/logo-cores.svg"
           alt="Logo"
           className={styles.logo}
-          width={104.8}
-          height={26.35}
+          // Não é preciso tamanhos tão precisos, arredondar para o número mais próximo é suficiente
+          // width={104.8}
+          // height={26.35}
+          width={105}
+          height={26}
         />
       </section>
       <section className={styles.headerContainer}>
@@ -30,7 +33,7 @@ const Header = () => {
         />
         <p 
           className={styles.locationText} 
-          style={{ fontSize: "12px", color: "#000000", fontWeight: "medium" }}
+          // style={{ fontSize: "12px", color: "#000000", fontWeight: "medium" }}
         >
         Rio de Janeiro </p>
         <Image

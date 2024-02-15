@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./styles/components.module.css";
+import styles from "./styles.module.css";
 
 const EventMessagingHeader = () => {
   return (
@@ -14,11 +14,12 @@ const EventMessagingHeader = () => {
         />
         <h2
           className={styles.eventName}
-          style={{
-            fontSize: "18px",
-            color: "#080930",
-            fontWeight: "bold",
-          }}
+          // Movido para o arquivo de estilos
+          // style={{
+          //   fontSize: "18px",
+          //   color: "#080930",
+          //   fontWeight: "bold",
+          // }}
         >
           Ready to Be World Tour
         </h2>
